@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rental Form</title>
+    <style>
+      form {
+        max-width: 400px;
+        margin: auto;
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .error {
+        color: red;
+        font-weight: bold;
+      }
+      .success {
+        background-color: #f8f8f8;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .offer {
+        font-weight: bold;
+        color: #009933;
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Stems Suites</h1>
+    <form method="POST" action="rental.php">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="id">National ID:</label>
+      <input type="text" id="id" name="id" required />
+
+      <label for="room">Room type:</label>
+      <select id="room" name="room" required>
+        <option value="">Select a room type</option>
+        <option value="Executive">Executive Suite - Price(R 5,000) NO VAT</option>
+        <option value="Penthouse">Penthouse Suite - Price(R 7,150) NO VAT</option>
+      </select>
+
+      <input type="submit" value="Calculate total" />
+    </form>
+  </body>
+</html>
